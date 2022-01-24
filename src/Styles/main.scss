@@ -3,7 +3,6 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 body {
-   
 }
 
 .movie-card {
@@ -25,17 +24,26 @@ body {
     }
 }
 
-.slick-prev:before, .slick-next:before
-{
+.slick-prev:before,
+.slick-next:before {
     color: black;
 }
 
-.slick-prev, .slick-next{
+.slick-prev,
+.slick-next {
     cursor: pointer;
     height: 30rem;
     width: 1rem;
 }
 
-.footer{
-    background-color: #24123A;
+.dropdown-group {
+    .list-group {
+        max-height: 15rem;
+        overflow: scroll;
+        z-index: 9999;
+    }
+}
+
+.footer {
+    background-color: #24123a;
 }

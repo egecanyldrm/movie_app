@@ -7,7 +7,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                                <a className="nav-link " aria-current="page" href="#tvseries"  >Popular TV Series</a>
+                                <a className="nav-link "  href="#tvseries"  >Popular TV Series</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#movies">Popular Movies </a>

@@ -2,6 +2,7 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 
 const SlickCarousel = ({ items, title, id }) => {
@@ -46,17 +47,20 @@ const SlickCarousel = ({ items, title, id }) => {
             <Slider {...settings}>
                 {items.map((movie) => {
                     return (
-                        <div key={movie.title ? movie.title : movie.name} className='position-relative movie-card  '  >
-                            <div className='position-absolute rounded py-1 px-2 avarage' >
-                                <h5> {movie.vote_average}/10</h5>
-                            </div>
+                        <Link to={`/search/detail/${movie.id}`} >
+                            <div key={movie.title ? movie.title : movie.name} className='position-relative movie-card  '  >
+                                <div className='position-absolute rounded py-1 px-2 avarage' >
+                                    <h5> {movie.vote_average}/10</h5>
+                                </div>
 
-                            <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" className='img-fluid' />
-                            <div className="overlay position-absolute ">
-                                <p className='m-auto text-break h5 '>{movie.original_title ? movie.original_title : movie.name}</p>
-                            </div>
+                                <img src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`} alt="poster" className='img-fluid' />
+                                <div className="overlay position-absolute ">
+                                    <p className='m-auto text-break h5 '>{movie.original_title ? movie.original_title : movie.name}</p>
+                                </div>
 
-                        </div>
+                            </div>
+                        </Link>
+
                     )
                 })}
             </Slider>

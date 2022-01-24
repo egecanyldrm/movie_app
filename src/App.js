@@ -11,7 +11,6 @@ const App = () => {
 
   return (
    <React.Fragment >
-    <Navbar />
     <Home /> 
     <Movies  />
     <TvSeries /> 
