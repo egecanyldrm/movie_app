@@ -1,5 +1,5 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Movies from './Components/Movies';
 import Navbar from './Components/Navbar';
@@ -15,6 +15,7 @@ const App = () => {
     <Home /> 
     <Movies  />
     <TvSeries /> 
+    <Footer /> 
    </React.Fragment>
   )
 };

@@ -14,11 +14,8 @@ const TvSeries = () => {
 
     }, [])
 
-    console.log(tvseries);
     return (
-        <div>
-            <SlickCarousel items={tvseries} title={"Popular Tv Series"} />
-        </div>
+            <SlickCarousel id={"tvseries"} items={tvseries} title={"Popular Tv Series"} />
     )
 };
 

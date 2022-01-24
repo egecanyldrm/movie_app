@@ -3,7 +3,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 body {
-    height: 150rem;
+   
 }
 
 .movie-card {
@@ -23,4 +23,19 @@ body {
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
     }
+}
+
+.slick-prev:before, .slick-next:before
+{
+    color: black;
+}
+
+.slick-prev, .slick-next{
+    cursor: pointer;
+    height: 30rem;
+    width: 1rem;
+}
+
+.footer{
+    background-color: #24123A;
 }

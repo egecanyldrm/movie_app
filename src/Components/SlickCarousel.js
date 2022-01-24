@@ -3,14 +3,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const SlickCarousel = ({items , title}) => {
+
+const SlickCarousel = ({ items, title, id }) => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -39,7 +41,7 @@ const SlickCarousel = ({items , title}) => {
         ]
     };
     return (
-        <div className=' p-5 mt-5' >
+        <div id={id} className=' p-5 mt-5' >
             <h1 className='mb-4'>{title} </h1>
             <Slider {...settings}>
                 {items.map((movie) => {
