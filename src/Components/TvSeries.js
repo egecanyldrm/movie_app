@@ -13,10 +13,8 @@ const TvSeries = () => {
             .catch((error) => console.log(error));
 
     }, [])
-
     return (
             <SlickCarousel id={"tvseries"} type={"tv"} items={tvseries} title={"Popular Tv Series"} />
     )
 };
-
 export default TvSeries;

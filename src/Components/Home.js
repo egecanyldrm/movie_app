@@ -14,11 +14,10 @@ const Home = () => {
             .then((response) => setResults(response.data.results))
             .catch(()=>{})
     }, [search])
-
-
+    
     return (
         <section className='d-flex justify-content-center home' style={{backgroundImage : `url(${Image})`}} >
-            <div className='position-absolute mt-lg-5 pt-md-5  pt-4 text-center' >
+            <div className='position-absolute mt-lg-1 pt-md-5  pt-4 text-center' >
                 <h1 className=' home-title' >Welcome</h1>
                 <h1 className='home-title' >World of TV Series & Movies</h1>
                 <div className="input-group input-group-lg">
@@ -26,21 +25,17 @@ const Home = () => {
                 </div>
                 <div className="dropdown-group">
                     <div className='list-group'>
-                        {search && results.map((item) => {
+                        { search && results.map((item) => {
                             return (
                                 <Link key={item.id} className='list-group-item list-group-item-action d-flex justify-content-between'  to={`/${item.media_type}/detail/${item.id}`} >
                                     <div>{item.original_title ? item.original_title : item.name}</div>
                                     <div className='text-capitalize'>{item.media_type}</div>
                                 </Link>
                             )
-
                         })}
-
                     </div>
                 </div>
-
             </div>
-
         </section>
     )
 };

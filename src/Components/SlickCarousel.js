@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 
-
 const SlickCarousel = ({ items, title, id, type }) => {
     const settings = {
         dots: true,
@@ -60,7 +59,6 @@ const SlickCarousel = ({ items, title, id, type }) => {
 
                             </div>
                         </Link>
-
                     )
                 })}
             </Slider>
