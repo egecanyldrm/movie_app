@@ -11,7 +11,7 @@ const AppRouter = () => {
             <ScrollToTop />
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route exact path="/search/detail/:id" component={DetailPage} />
+                <Route exact path="/:type/detail/:id" component={DetailPage} />
             </Switch>
         </BrowserRouter>
     )

@@ -8,10 +8,7 @@ const Footer = () => {
                <a href="https://egecanyildirim.com/" className=' text-white btn' > 
                <h4>Egecan Yıldırım</h4>
                </a>
-               <div > 
-               <a href="https://github.com/egecanyldrm" className=' text-white btn' ><h5>Github</h5></a>
-               <a href="https://www.linkedin.com/in/egecan-yildirim/" className=' text-white btn' ><h5>Linkedin</h5></a>
-               </div>
+              
             </div>
         </div>
     )

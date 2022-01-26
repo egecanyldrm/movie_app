@@ -15,7 +15,7 @@ const TvSeries = () => {
     }, [])
 
     return (
-            <SlickCarousel id={"tvseries"} items={tvseries} title={"Popular Tv Series"} />
+            <SlickCarousel id={"tvseries"} type={"tv"} items={tvseries} title={"Popular Tv Series"} />
     )
 };
 

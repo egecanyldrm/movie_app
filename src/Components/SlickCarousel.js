@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 
 
-const SlickCarousel = ({ items, title, id }) => {
+const SlickCarousel = ({ items, title, id, type }) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -47,8 +47,8 @@ const SlickCarousel = ({ items, title, id }) => {
             <Slider {...settings}>
                 {items.map((movie) => {
                     return (
-                        <Link to={`/search/detail/${movie.id}`} >
-                            <div key={movie.title ? movie.title : movie.name} className='position-relative movie-card  '  >
+                        <Link key={movie.title ? movie.title : movie.name} to={`/${type}/detail/${movie.id}`} >
+                            <div className='position-relative movie-card  '  >
                                 <div className='position-absolute rounded py-1 px-2 avarage' >
                                     <h5> {movie.vote_average}/10</h5>
                                 </div>
