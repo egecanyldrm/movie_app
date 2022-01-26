@@ -17,6 +17,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a href="https://www.linkedin.com/in/egecan-yildirim/" className='nav-link text-center my-2' target="_blank" >Linkedin</a>
                         </li>
+                        <li className="nav-item">
+                            <a href="https://www.egecanyildirim.com" className='nav-link text-center my-2' target="_blank" >Personal Web Site </a>
+                        </li>
                     </ul>
                 </div>
             </div>

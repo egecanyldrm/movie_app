@@ -23,17 +23,17 @@ const DetailPage = ({ match }) => {
         <React.Fragment >
             { detail ? 
                     <div style={{ backgroundImage: `url("${url}")` }} className='background-image'>
-                        <div className="linear px-5 ">
+                        <div className=" linear  px-5 ">
                             <div className=" d-flex justify-content-center py-5 px-5">
-                                <div className="text-white d-flex justify-content-center flex-md-row flex-column px-5 ">
-                                    <div className="card col-md-4 " style={{ width: '21rem' }}>
+                                <div className=" responsive  text-white d-flex justify-content-center align-items-md-center align-items-xl-start flex-sm-column flex-lg-row px-5 ">
+                                    <div className=" poster-card card col-md-4" >
                                         {detail.poster_path && <img src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`} alt="" className="card-image-top" />}
                                     </div>
-                                    <div className="content  col-md-8 ps-5">
+                                    <div className="content  col-md-8 ps-sm-5">
                                         <h1>{detail.name ? detail.name : detail.title}</h1>
                                         <div className="info d-flex mt-3">
                                             <span className='me-3' >{detail.release_date}   </span>
-                                            <ul className='d-flex list-unstyled' >{detail.genres && detail.genres.map((genres) => (<li key={genres.id} className='ms-2' > {genres.name}  </li>))}</ul>
+                                            <ul className='d-flex list-unstyled flex-wrap' >{detail.genres && detail.genres.map((genres) => (<li key={genres.id} className='ms-2' > {genres.name}  </li>))}</ul>
                                         </div>
                                         <div className="rate ">
                                             <CircularProgressbar value={detail.vote_average * 10} text={`${detail.vote_average * 10}%`} styles={{ path: { stroke: '#21d07a', transition: 'stroke-dashoffset 0.5s ease 0s' }, text: { fill: '#ffff', fontSize: '25px' } }} />

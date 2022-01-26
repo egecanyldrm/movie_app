@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <section className='d-flex justify-content-center home' style={{backgroundImage : `url(${Image})`}} >
-            <div className='position-absolute mt-lg-5 pt-md-5  pt-4 text-center' >
+            <div className='position-absolute mt-lg-1 pt-md-5  pt-4 text-center' >
                 <h1 className=' home-title' >Welcome</h1>
                 <h1 className='home-title' >World of TV Series & Movies</h1>
                 <div className="input-group input-group-lg">
