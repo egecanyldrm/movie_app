@@ -2,6 +2,7 @@
   "name": "movie_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://movie-app.egecanyildirim.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -28,6 +29,7 @@
       "react-app/jest"
     ]
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",

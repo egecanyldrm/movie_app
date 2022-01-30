@@ -47,7 +47,7 @@ const Cast = ({ id, type }) => {
         axios
             .get(`https://api.themoviedb.org/3/${type}/${id}/credits?api_key=b6a36190fedc206b2be58a35c9b08e95`)
             .then((response) => { setCast(response.data.cast) })
-    }, [])
+    }, [id, type])
     return (
         <React.Fragment>
         {cast.length >5 ? 
