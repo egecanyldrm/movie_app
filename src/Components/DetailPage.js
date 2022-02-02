@@ -11,7 +11,7 @@ const DetailPage = ({ match }) => {
 
     useEffect(() => {
         axios
-            .get(`https://api.themoviedb.org/3/${match.params.type}/${match.params.id}?api_key=b6a36190fedc206b2be58a35c9b08e95`)
+            .get(`hasdttps://api.themoviedb.org/3/${match.params.type}/${match.params.id}?api_key=b6a36190fedc206b2be58a35c9b08e95`)
             .then((response) => { setDetail(response.data); });
     }, [match.params.id, match.params.type])
 
