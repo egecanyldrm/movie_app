@@ -46,7 +46,7 @@ const SlickCarousel = ({ items, title, id, type }) => {
             <Slider {...settings}>
                 {items.map((movie) => {
                     return (
-                        <Link key={movie.title ? movie.title : movie.name} to={`/${type}/detail/${movie.id}`} >
+                        <Link key={movie.title ? movie.title : movie.name} to={`/detail/${type}/${movie.id}`} >
                             <div className='position-relative movie-card  '  >
                                 <div className='position-absolute rounded py-1 px-2 avarage' >
                                     <h5> {movie.vote_average}/10</h5>

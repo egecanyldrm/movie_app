@@ -1,18 +1,20 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import App from '../App';
 import DetailPage from '../Components/DetailPage';
 import Navbar from '../Components/Navbar';
-import ScrollToTop from '../Routers/ScrollToTop'
+import NotFoundPage from '../Components/NotFoundPage';
+
 const AppRouter = () => {
+
     return (
-        <BrowserRouter>
+        <BrowserRouter  >
             <Navbar />
-            <ScrollToTop />
-            <Switch>
-                <Route exact path="/" component={App} />
-                <Route exact path="/:type/detail/:id" component={DetailPage} />
-            </Switch>
+            <Routes>
+                <Route exact path="/" element={<App />} />
+                <Route path="/detail/:type/:id" element={<DetailPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
         </BrowserRouter>
     )
 };
